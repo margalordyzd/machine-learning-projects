@@ -11809,7 +11809,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11866,7 +11866,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display a description of the dataset</span>
@@ -11995,7 +11995,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Select three indices of your choice you wish to sample from the dataset</span>
@@ -12127,7 +12127,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cross_validation</span> <span class="kn">import</span> <span class="n">train_test_split</span>
@@ -12151,10 +12151,27 @@ div#notebook {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/usr/local/lib/python2.7/dist-packages/sklearn/cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  &#34;This module will be removed in 0.20.&#34;, DeprecationWarning)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">score</span>
@@ -12169,12 +12186,12 @@ div#notebook {
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[27]:</div>
+<div class="prompt output_prompt">Out[6]:</div>
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.7509284855819931</pre>
+<pre>0.66468386606175645</pre>
 </div>
 
 </div>
@@ -12216,7 +12233,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Produce a scatter matrix for each pair of features in the data</span>
@@ -13676,13 +13693,115 @@ OVKGYRiGYRiGYRjL5P8Hlbw/WCOgmG0AAAAASUVORK5CYII=
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[8]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Fresh</th>
+      <th>Milk</th>
+      <th>Grocery</th>
+      <th>Frozen</th>
+      <th>Detergents_Paper</th>
+      <th>Delicatessen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Fresh</th>
+      <td>1.000000</td>
+      <td>0.100510</td>
+      <td>-0.011854</td>
+      <td>0.345881</td>
+      <td>-0.101953</td>
+      <td>0.244690</td>
+    </tr>
+    <tr>
+      <th>Milk</th>
+      <td>0.100510</td>
+      <td>1.000000</td>
+      <td>0.728335</td>
+      <td>0.123994</td>
+      <td>0.661816</td>
+      <td>0.406368</td>
+    </tr>
+    <tr>
+      <th>Grocery</th>
+      <td>-0.011854</td>
+      <td>0.728335</td>
+      <td>1.000000</td>
+      <td>-0.040193</td>
+      <td>0.924641</td>
+      <td>0.205497</td>
+    </tr>
+    <tr>
+      <th>Frozen</th>
+      <td>0.345881</td>
+      <td>0.123994</td>
+      <td>-0.040193</td>
+      <td>1.000000</td>
+      <td>-0.131525</td>
+      <td>0.390947</td>
+    </tr>
+    <tr>
+      <th>Detergents_Paper</th>
+      <td>-0.101953</td>
+      <td>0.661816</td>
+      <td>0.924641</td>
+      <td>-0.131525</td>
+      <td>1.000000</td>
+      <td>0.069291</td>
+    </tr>
+    <tr>
+      <th>Delicatessen</th>
+      <td>0.244690</td>
+      <td>0.406368</td>
+      <td>0.205497</td>
+      <td>0.390947</td>
+      <td>0.069291</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> by a general obserbation, it can be seen that the 'Delicatessen' may have a low correlation with the other variables because in the scatter plot, most of the points in relation to the other variables are compressed in to the lower left side of the plot, particularly with 'Frozen' to which it can be assumed a relatively low degree of correlation. and can serve to identifying a specific costumer.</p>
-<p>in the other hand, 'Detergents_Paper', the variable i chose, can be observed to have a wider visual distributions of the points in the plot which implies a relatively high level of correlation with the other variables, so it may not be that relevant when identifying a specific consumer. the point lie in different ways but they tend to form a line in the graphs with Milk and Groceries which implies some kind of relation. that diagonal line plot is observed in the plots concerning milk, groceries and detergents so these three variables are the most correlated ones.</p>
+<p><strong>Answer:</strong> by a general observation, it can be seen that the 'Delicatessen' may have a low correlation with the other variables because in the scatter plot, most of the points in relation to the other variables are compressed in to the lower left side of the plot, particularly with 'Frozen' to which it can be assumed a relatively low degree of correlation. and can serve to identifying a specific costumer.</p>
+<p>in the other hand, 'Detergents_Paper', the variable i chose, can be observed to have a wider visual distributions of the points in the plot which implies a relatively high level of correlation with the other variables, so it may not be that relevant when identifying a specific consumer. the point lie in different ways but they tend to form a line in the graphs with Milk and Groceries which implies some kind of relation. that diagonal line plot is observed in the plots concerning groceries and detergents so these two variables are the most correlated ones (.92), a correlation with milk is also observed but this is more mild. with this and taking into account the last question, we can see that Detergents_Paper is a variable that my not give us that much information about the client because it is 92% correlated to groceries, this is why we got such a high score in the above prediction.</p>
+<p>from the diagonal graphs we can observe a density plot for each variable. most of the variables have the same shape for their distribution, and all them are right skewed, wich mean that a further normalization will be needed to homogenize the data and work with it and the clustering algorithms.</p>
+<p>Also, the distributions have different values for sigma being, apparently, 'Fresh' the one with the highest sigma and therefore, the highest std and 'Delicatesen' the lowest.</p>
 
 </div>
 </div>
@@ -18398,10 +18517,10 @@ wyQiIiIiIhKDOkwiIiIiIiIx/D+jU0IMdAMXcQAAAABJRU5ErkJggg==
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong> the first two PCA's explain most of the variance, 72.52% of it.</p>
-<p>we can see the first pca confirm what we have been talking about that Groceries, Milk and Detergents are highly correlated. also these three are the biggest in the first bar graph and account for almost 50% of the variance, together with groceries with positive weights.</p>
+<p>we can see the first pca confirm what we have been talking about that Groceries, Milk and Detergents are highly correlated. also these three are the biggest in the first bar graph and account for almost 50% of the variance. this could mean that these three variables may be the most important in distinguishing a certain kind of costumer.</p>
 <p>The first four PCA's represent 92.79% of the variance making the las two almost irrelevant.</p>
-<p>the second dimention show us more wight in frozen, fresh an delicatessen, wich implies that there is some sort of relationship between these variables.</p>
-<p>the second and the third are remarcable because its highly negative features. the third with "Fresh" and the fourth with "Frozen" and both of them together, in a lower scale, by "Detergents Paper"</p>
+<p>the second dimension show us more weight in frozen, fresh an delicatessen, which implies that these three variables are highly related with another kind of costumer and will serve to identify him.</p>
+<p>the third and the third are remarcable because its highly weighted features. the third with "Fresh" and the fourth with "Frozen" and both of them together, in a lower scale, by "Delicatessen"</p>
 
 </div>
 </div>
