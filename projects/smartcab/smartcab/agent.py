@@ -87,7 +87,7 @@ class LearningAgent(Agent):
         ## TO DO ##
         ###########
         # Set 'state' as a tuple of relevant data for the agent        
-        state = tuple([waypoint] + inputs.values()[0:3])
+        state = tuple([waypoint] + [inputs['light']]+[inputs['left']]+[inputs['oncoming']])
         #state = tuple([waypoint])
         return state
 
@@ -228,7 +228,7 @@ def run():
     #   display      - set to False to disable the GUI if PyGame is enabled
     #   log_metrics  - set to True to log trial and simulation results to /logs
     #   optimized    - set to True to cPhange the default log file name
-    sim = Simulator(env, update_delay=0.01, log_metrics = True, display = False)
+    sim = Simulator(env, update_delay=0.01, log_metrics = True, display = False,optimized=True)
     
     ##############
     # Run the simulator
